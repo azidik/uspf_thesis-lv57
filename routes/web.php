@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register-new-user', 'UserController@index');
+Route::post('/register-new-user', 'UserController@store');
